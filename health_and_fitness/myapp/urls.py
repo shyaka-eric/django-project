@@ -35,7 +35,7 @@ urlpatterns = [
     path('goal/<int:pk>/update/', GoalUpdateView.as_view(), name='goal_update'),
     path('goal/<int:pk>/delete/', GoalDeleteView.as_view(), name='goal_delete'),
 
-     path('progress/create/', ProgressCreateView.as_view(), name='progress_create'),
+    path('progress/create/', ProgressCreateView.as_view(), name='progress_create'),
     path('progress/', ProgressListView.as_view(), name='progress_list'),
     path('progress/<int:pk>/update/', ProgressUpdateView.as_view(), name='progress_update'),
     path('progress/<int:pk>/delete/', ProgressDeleteView.as_view(), name='progress_delete'),

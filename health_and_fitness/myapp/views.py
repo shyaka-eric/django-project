@@ -54,13 +54,18 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            users = User.objects.all()  # Fetch all users
-            return redirect('index', user=users)
+            return redirect('index')  # Redirect to the 'index' page upon successful login
         else:
             messages.error(request, 'Username or password is incorrect')
             return redirect("login")
     else:
         return render(request, 'login.html')
+
+
+
+
+
+
 
 
 #@login_required(login_url='login') Put this at every page you want user to view while loged in
